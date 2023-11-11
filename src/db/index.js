@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+/*use "ASYNC" because it alwasys takes time and use "TRYCATCH" To handle problems(error) while connecting DB */
 // impoting dbname from constant
 import { DB_NAME } from "../constants.js";
 
