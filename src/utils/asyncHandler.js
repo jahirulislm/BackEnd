@@ -1,8 +1,8 @@
-// creating utility function for db connection in two ways with "promise" and "HigherOrder func"
+// creating utility function for db connection in two ways with "promise" and "HigherOrder func as helper file"
 
 // using Promise
 const asyncHandler = (requstHandler) => {
-  (req, res, next) => {
+  return (req, res, next) => {
     Promise.resolve(requstHandler(req, res, next)).catch((err) => next(err));
   };
 };

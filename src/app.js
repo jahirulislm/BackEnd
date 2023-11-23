@@ -22,5 +22,11 @@ app.use(express.static("public"));
 // config cookieParser like access the browser cookie and create "CRUD" on the cookies of the user.
 app.use(cookieParser());
 
+// routes import
+import userRouter from "./routes/user.routes.js";
+
+//  route diclaration
+app.use("/api/v1/users", userRouter);
+
 // exporting the app
 export { app };
